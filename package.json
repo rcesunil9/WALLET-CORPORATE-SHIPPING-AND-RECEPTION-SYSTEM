@@ -1,0 +1,48 @@
+{
+    "name": "acorporado-wallet",
+    "version": "1.0.0",
+    "description": "Whatsapp api por Miguel Angel Mituy",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "start:dev": "nodemon app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "nodemonConfig": {
+        "ignore": [
+            "sockets/*"
+        ]
+    },
+    "keywords": [
+        "whatsapp-api-wallet",
+        "node.js"
+    ],
+    "author": "Miguel Angel Mituy",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-fileupload": "^1.2.1",
+        "express-validator": "^6.9.2",
+        "fs": "^0.0.1-security",
+        "http": "0.0.1-security",
+        "jshint": "^2.12.0",
+        "mongoose": "^5.12.2",
+        "npm-check-updates": "^11.3.0",
+        "npm-update": "^2.1.0",
+        "puppeteer": "^5.5.0",
+        "qrcode": "^1.4.4",
+        "qrcode-terminal": "^0.12.0",
+        "socket.io": "^2.4.1",
+        "whatsapp-web.js": "^1.12.5"
+    },
+    "engines": {
+        "node": "v12.10.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    }
+}
