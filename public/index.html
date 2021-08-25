@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Whatsapp API by Acorporado</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>Whatsapp API Acorporado wallet </h1>
+        <p>Creado por Miamith</p>
+        <img src="" alt="QR Code" id="qrcode">
+        <h3>Logs:</h3>
+        <ul class="logs"></ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="./socket.io/socket.io.js"></script>
+    </script>
+    <script>
+        $(document).ready(function() {
+            var socket = io();
+            socket.on('message', function(msg) {
+                $('.logs').append($('<li>').text(msg));
+            });
+
+            socket.on('qr', function(src) {
+                $('#qrcode').attr('src', src);
+                $('#qrcode').show();
+            });
+
+            socket.on('listo', function(data) {
+                $('#qrcode').hide();
+            });
+
+            socket.on('authenticated', function(data) {
+                $('#qrcode').hide();
+            });
+        });
+    </script>
+</body>
+
+</html>
